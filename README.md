@@ -14,14 +14,32 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Building the Docker image
+## Use Docker
+
+Two different methods you can:
+
+### 1. Clone the repository first and then build and running the image
+
+#### Building the Docker image
 
 ```
-docker build -t car_showcase .
+docker build --build-arg NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' --build-arg NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -t car_showcase .
 ```
 
-## Running the Docker image
+#### Running the Docker image
 
 ```
-docker run -d --rm -p 3000:3000 car_showcase
+docker run -d --rm -p 3000:3000 --name car_showcase car_showcase
 ```
+
+> The --rm argument is to delete the container when you stop the container, you can remove it if you want
+
+### 2. Directly pull the image from Docker Hub, no need to clone the repository
+
+#### Pull from Docker Hub and run the Docker image
+
+```
+docker run -e NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' -e NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -d --rm -p 3000:3000 --name car_showcase cosmicjaeger/car_showcase
+```
+
+> The --rm argument is to delete the container when you stop the container, you can remove it if you want
