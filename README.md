@@ -1,3 +1,5 @@
+<img width="1639" alt="background" src="https://github.com/alexCoding42/car_showcase/assets/56698920/22ce3878-29cc-4c31-b073-ffa5ab2f9d3f">
+
 This is an example of a Next.js React App that has been dockerized which requires api keys to run.
 
 ## Installation and running locally
