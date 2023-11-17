@@ -25,7 +25,7 @@ Two different methods you can:
 #### Building the Docker image
 
 ```
-docker build --build-arg NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' --build-arg NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -t car_showcase .
+docker image build --build-arg NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' --build-arg NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -t car_showcase .
 ```
 
 #### Running the Docker image
@@ -41,7 +41,7 @@ docker run -d --rm -p 3000:3000 --name car_showcase car_showcase
 #### Pull from Docker Hub and run the Docker image
 
 ```
-docker run -e NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' -e NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -d --rm -p 3000:3000 --name car_showcase cosmicjaeger/car_showcase
+docker run -e NEXT_PUBLIC_RAPID_API_KEY='your_rapid_api_key' -e NEXT_PUBLIC_IMAGIN_API_KEY='your_imagin_api_key' -d --rm -p 3000:3000 --name car_showcase alexcoding2065/car_showcase
 ```
 
 > The --rm argument is to delete the container when you stop the container, you can remove it if you want
